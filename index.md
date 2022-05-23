@@ -11,7 +11,7 @@
 
 ### Project CAS FI5080 (Sem 2/2021)
 
-1. Project 01: Jarak Titik ke Suatu Bidang Datar
+1. Project 01: [Jarak Titik ke Suatu Bidang Datar](contoh CAS 01.html)
 2. Project 02: Solusi SPL Dengan Metode Cramer
 3. Project 03: 
 4. Project 04: Sumbu Utama Permukaan (Diagonalisasi Matriks)
@@ -23,7 +23,7 @@
 10. Project 10: Transformasi Operator Differensial
 11. Project 11: Impedansi Rangkaian AC
 12. Project 12: Penentuan Residu Fungsi Kompleks
-13. Project 13: Ekspansi Fungsi dalam Deret Fourier
+13. Project 13: [Ekspansi Fungsi dalam Deret Fourier](contoh CAS 13.html)
 14. Project 14: Transformasi Fourier
-15. Project 15: Penyelesaian Persamaan Differensial: Laju Terminal
-16. Project 16: Solusi PDB dengan Transformasi Laplace
+15. Project 15: [Penyelesaian Persamaan Differensial: Laju Terminal](contoh CAS 15.html)
+16. Project 16: [Solusi PDB dengan Transformasi Laplace](contoh CAS 16.html)
