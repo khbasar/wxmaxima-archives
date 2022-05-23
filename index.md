@@ -5,7 +5,7 @@
 1. [Tutorial 01](t-wx-integral.html)
 2. Tutorial 02
 3. Tutorial 03
-4. Catatan 01
+4. [Catatan 01](catatan-penggunaan-maxima.html)
 5. Catatan 02
 6. Catatan 03
 
