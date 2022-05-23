@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>contoh CAS 16</title>
+    <meta name="generator" content="wxMaxima"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/x-mathjax-config">  MathJax.Hub.Config({
+    displayAlign: "left",
+    context: "MathJax",
+    TeX: {TagSide: "left"}
+  })
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async="async">  // A comment that hinders wxWidgets from optimizing this tag too much.
+</script>
+    <link rel="stylesheet" type="text/css" href="contoh%20CAS%2016_htmlimg/contoh%20CAS%2016.css"/>
+  </head>
+  <body>
+    <!-- ****************************************************** -->
+    <!-- *        Created with wxMaxima version 21.05.2       * -->
+    <!-- ****************************************************** -->
+    <noscript>
+      <div class="error message">
+        <p>Please enable JavaScript in order to get a 2d display of the equations embedded in this web page.</p>
+      </div>
+    </noscript>
+    <p hidden="hidden">\(      \DeclareMathOperator{\abs}{abs}
+      \newcommand{\ensuremath}[1]{\mbox{$#1$}}
+\)</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i1)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">kill</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">all</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\ensuremath{\mathrm{done}}\]
+</p>
+    <!-- Image cell -->
+    <div class="image">Figure 1:D:\DATA KHBASAR\Kuliah\FI5080_sem2_2021-2022\CAS Project 16.jpg
+
+      <br/>
+      <img src="contoh%20CAS%2016_htmlimg/contoh%20CAS%2016_1.jpg" alt="Diagram" style="max-width:90%;" loading="lazy"/>
+    </div>
+    <!-- Text cell -->
+    <div class="comment">Persamaan differensial orde 2 yang akan dicari solusinya menggunakan transformasi Laplace
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i1)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">pdbo2</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">a</span>
+            <span class="code_operator">·</span>
+            <span class="code_operator">'</span>
+            <span class="code_function">diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">x</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">t</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">t</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">b</span>
+            <span class="code_operator">·</span>
+            <span class="code_operator">'</span>
+            <span class="code_function">diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">x</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">t</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">t</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">c</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">%e</span>
+            <span class="code_operator">^</span>
+            <span class="code_variable">t</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*persamaan differensial orde 2; a, b dan c adalah konstanta*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(pdbo2)	}a\, \left( \frac{{{d}^{2}}}{d {{t}^{2}}} \operatorname{x}(t)\right) +b\, \left( \frac{d}{d t} \operatorname{x}(t)\right) +c={{\% e}^{t}}\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Transformasi Laplace pdb tersebut
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i2)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">trlap</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">laplace</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">pdbo2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">t</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">p</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*transformasi Laplace PDBO2 tersebut, variabel lama adalah t dan variabel </span>
+            <span class="code_comment">
+              <br/>
+            </span>
+            <span class="code_comment">baru adalah p*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(trlap)	}a\, \left( -\left. \frac{d}{d t} \operatorname{x}(t)\right|_{t=0}+{{p}^{2}} \operatorname{laplace}\left( \operatorname{x}(t)\operatorname{,}t\operatorname{,}p\right) -\operatorname{x}(0) p\right) +b\, \left( p \operatorname{laplace}\left( \operatorname{x}(t)\operatorname{,}t\operatorname{,}p\right) -\operatorname{x}(0)\right) +\frac{c}{p}=\frac{1}{p-1}\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Masukkan syarat awal, yaitu x(0)=0 dan x'(0)=0
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i3)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">syawal</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">subst</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_function">x</span>
+            <span class="code_operator">(</span>
+            <span class="code_number">0</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_function">at</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">'</span>
+            <span class="code_function">diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">x</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">t</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">t</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">t</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">0</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">0</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">trlap</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*masukkan syarat awal*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(syawal)	}a {{p}^{2}} \operatorname{laplace}\left( \operatorname{x}(t)\operatorname{,}t\operatorname{,}p\right) +b p \operatorname{laplace}\left( \operatorname{x}(t)\operatorname{,}t\operatorname{,}p\right) +\frac{c}{p}=\frac{1}{p-1}\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Cari solusi persamaan tersebut, nyatakan laplace(x(t),t,p) sama dengan sesuatu
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i4)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">solusi</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">solve</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">syawal</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">'</span>
+            <span class="code_function">laplace</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">x</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">t</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">t</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">p</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*selesaikan persamaan linier yang dihasilkan*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(solusi)	}\left[ \operatorname{laplace}\left( \operatorname{x}(t)\operatorname{,}t\operatorname{,}p\right) =-\frac{\left( c-1\right)  p-c}{a {{p}^{4}}+\left( b-a\right)  {{p}^{3}}-b {{p}^{2}}}\right] \]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Gunakan invers transformasi Laplace
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i5)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">solusi_akhir</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">ilt</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">solusi</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">p</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">t</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*gunakan inverse transformasi laplace untuk mendapatkan solusi x(t)*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(solusi\_ akhir)	}\operatorname{x}(t)=-\frac{\left( \left( {{a}^{2}} b+{{a}^{3}}\right)  c-{{a}^{2}} b\right)  {{\% e}^{-\frac{b t}{a}}}}{a\, \left( {{b}^{3}}+a {{b}^{2}}\right) }+\frac{{{\% e}^{t}}}{b+a}-\frac{c t}{b}+\frac{a c-b}{{{b}^{2}}}\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Misalkan ingin dihitung jika diketahui nilai a = 1, b = 2 dan c = 3
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i6)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">solkhus</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">subst</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">a</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">b</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">c</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">3</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_function">rhs</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">solusi_akhir</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(solkhus)	}\frac{{{\% e}^{t}}}{3}-\frac{7 {{\% e}^{-2 t}}}{12}-\frac{3 t}{2}+\frac{1}{4}\]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i7)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">define</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">x</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">t</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">solkhus</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\operatorname{x}(t)\operatorname{:=}\frac{{{\% e}^{t}}}{3}-\frac{7 {{\% e}^{-2 t}}}{12}-\frac{3 t}{2}+\frac{1}{4}\]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i8)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">x</span>
+            <span class="code_operator">(</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\frac{\% e}{3}-\frac{7 {{\% e}^{-2}}}{12}-\frac{5}{4}\]
+</p>
+    <hr/>
+    <p>
+      <small> Created with 
+        <a href="https://wxMaxima-developers.github.io/wxmaxima/">wxMaxima</a>.</small>
+    </p>
+    <small> The source of this Maxima session can be downloaded 
+      <a href="contoh CAS 16_htmlimg/contoh CAS 16.wxmx">here</a>.</small>
+  </body>
+</html>

@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>contoh CAS 13</title>
+    <meta name="generator" content="wxMaxima"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/x-mathjax-config">  MathJax.Hub.Config({
+    displayAlign: "left",
+    context: "MathJax",
+    TeX: {TagSide: "left"}
+  })
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async="async">  // A comment that hinders wxWidgets from optimizing this tag too much.
+</script>
+    <link rel="stylesheet" type="text/css" href="contoh%20CAS%2013_htmlimg/contoh%20CAS%2013.css"/>
+  </head>
+  <body>
+    <!-- ****************************************************** -->
+    <!-- *        Created with wxMaxima version 21.05.2       * -->
+    <!-- ****************************************************** -->
+    <noscript>
+      <div class="error message">
+        <p>Please enable JavaScript in order to get a 2d display of the equations embedded in this web page.</p>
+      </div>
+    </noscript>
+    <p hidden="hidden">\(      \DeclareMathOperator{\abs}{abs}
+      \newcommand{\ensuremath}[1]{\mbox{$#1$}}
+\)</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i1)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">kill</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">all</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\ensuremath{\mathrm{done}}\]
+</p>
+    <!-- Image cell -->
+    <div class="image">Figure 1:D:\DATA KHBASAR\Kuliah\FI5080_sem2_2021-2022\CAS Project 13.jpg
+
+      <br/>
+      <img src="contoh%20CAS%2013_htmlimg/contoh%20CAS%2013_1.jpg" alt="Diagram" style="max-width:90%;" loading="lazy"/>
+    </div>
+    <!-- Text cell -->
+    <div class="comment">Definisi fungsi pada interval [0,2]
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i13)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">N</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">20</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">f1</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*segmen 1 fungsi yang akan diekspansikan */</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">xbf1</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*batas interval bawah segmen fungsi f1(x)*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">xaf1</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">.</span>
+            <span class="code_number">5</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*batas interval atas segmen fungsi f1(x)*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*---*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">f2</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">2</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*segmen 2 fungsi yang akan diekspansikan*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">xbf2</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">.</span>
+            <span class="code_number">5</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*batas interval bawah segmen fungsi f2(x)*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">xaf2</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*batas interval atas segmen fungsi f2(x)*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*---*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">f3</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">+</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*segmen 3 fungsi yang akan diekspansikan*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">xbf3</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*batas interval bawah segmen fungsi f3(x)*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">xaf3</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">.</span>
+            <span class="code_number">5</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*batas interval atas segmen fungsi f3(x)*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*---*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">f4</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*segmen 4 fungsi yang akan diekspansikan*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">xbf4</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">.</span>
+            <span class="code_number">5</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*batas interval bawah segmen fungsi f4(x)*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">xaf4</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">2</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*batas interval atas segmen fungsi f4(x)*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Text cell -->
+    <div class="comment">Perhitungan koefisien Fourier
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i23)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">a0</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f1</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xbf1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xaf1</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">+</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f2</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xbf2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xaf2</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">
+              <br/>
+            </span>   
+            <span class="code_operator">+</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f3</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xbf3</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xaf3</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">+</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f4</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xbf4</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xaf4</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*iterasi*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">for</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">1</span>
+            <span class="code_function">thru</span>
+            <span class="code_variable">N</span>
+            <span class="code_function">do</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">(</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">a</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f1</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">·</span>
+            <span class="code_function">cos</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">%pi</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xbf1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xaf1</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_operator">+</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f2</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">·</span>
+            <span class="code_function">cos</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">%pi</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xbf2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xaf2</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_operator">+</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f3</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">·</span>
+            <span class="code_function">cos</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">%pi</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xbf3</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xaf3</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_operator">+</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f4</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">·</span>
+            <span class="code_function">cos</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">%pi</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xbf4</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xaf4</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">b</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f1</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">·</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">%pi</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xbf1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xaf1</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_operator">+</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f2</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">·</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">%pi</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xbf2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xaf2</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_operator">+</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f3</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">·</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">%pi</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xbf3</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xaf3</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_operator">+</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f4</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">·</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">%pi</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xbf4</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xaf4</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">ratprint</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">false</span>
+            <span class="code_endofline">$</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Text cell -->
+    <div class="comment">Ekspansi fungsi
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i25)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">ftot</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">a0</span>
+            <span class="code_operator">/</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">+</span>
+            <span class="code_function">sum</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">a</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">·</span>
+            <span class="code_function">cos</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">%pi</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">b</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">·</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">%pi</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">i</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">N</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">'</span>
+            <span class="code_operator">'</span>
+            <span class="code_variable">ftot</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}-\frac{\sin{\left( 20 \ensuremath{\pi}  x\right) }}{20 \ensuremath{\pi} }-\frac{\sin{\left( 19 \ensuremath{\pi}  x\right) }}{19 \ensuremath{\pi} }+\frac{3 \cos{\left( 19 \ensuremath{\pi}  x\right) }}{19 \ensuremath{\pi} }-\frac{\sin{\left( 18 \ensuremath{\pi}  x\right) }}{18 \ensuremath{\pi} }-\frac{\cos{\left( 18 \ensuremath{\pi}  x\right) }}{81 {{\ensuremath{\pi} }^{2}}}-\frac{\sin{\left( 17 \ensuremath{\pi}  x\right) }}{17 \ensuremath{\pi} }-\frac{3 \cos{\left( 17 \ensuremath{\pi}  x\right) }}{17 \ensuremath{\pi} }-\frac{\sin{\left( 16 \ensuremath{\pi}  x\right) }}{16 \ensuremath{\pi} }-\frac{\sin{\left( 15 \ensuremath{\pi}  x\right) }}{15 \ensuremath{\pi} }+\frac{\cos{\left( 15 \ensuremath{\pi}  x\right) }}{5 \ensuremath{\pi} }-\frac{\sin{\left( 14 \ensuremath{\pi}  x\right) }}{14 \ensuremath{\pi} }-\frac{\cos{\left( 14 \ensuremath{\pi}  x\right) }}{49 {{\ensuremath{\pi} }^{2}}}-\frac{\sin{\left( 13 \ensuremath{\pi}  x\right) }}{13 \ensuremath{\pi} }-\frac{3 \cos{\left( 13 \ensuremath{\pi}  x\right) }}{13 \ensuremath{\pi} }-\frac{\sin{\left( 12 \ensuremath{\pi}  x\right) }}{12 \ensuremath{\pi} }-\frac{\sin{\left( 11 \ensuremath{\pi}  x\right) }}{11 \ensuremath{\pi} }+\frac{3 \cos{\left( 11 \ensuremath{\pi}  x\right) }}{11 \ensuremath{\pi} }-\frac{\sin{\left( 10 \ensuremath{\pi}  x\right) }}{10 \ensuremath{\pi} }-\frac{\cos{\left( 10 \ensuremath{\pi}  x\right) }}{25 {{\ensuremath{\pi} }^{2}}}-\frac{\sin{\left( 9 \ensuremath{\pi}  x\right) }}{9 \ensuremath{\pi} }-\frac{\cos{\left( 9 \ensuremath{\pi}  x\right) }}{3 \ensuremath{\pi} }-\frac{\sin{\left( 8 \ensuremath{\pi}  x\right) }}{8 \ensuremath{\pi} }-\frac{\sin{\left( 7 \ensuremath{\pi}  x\right) }}{7 \ensuremath{\pi} }+\frac{3 \cos{\left( 7 \ensuremath{\pi}  x\right) }}{7 \ensuremath{\pi} }-\frac{\sin{\left( 6 \ensuremath{\pi}  x\right) }}{6 \ensuremath{\pi} }-\frac{\cos{\left( 6 \ensuremath{\pi}  x\right) }}{9 {{\ensuremath{\pi} }^{2}}}-\frac{\sin{\left( 5 \ensuremath{\pi}  x\right) }}{5 \ensuremath{\pi} }-\frac{3 \cos{\left( 5 \ensuremath{\pi}  x\right) }}{5 \ensuremath{\pi} }-\frac{\sin{\left( 4 \ensuremath{\pi}  x\right) }}{4 \ensuremath{\pi} }-\frac{\sin{\left( 3 \ensuremath{\pi}  x\right) }}{3 \ensuremath{\pi} }+\frac{\cos{\left( 3 \ensuremath{\pi}  x\right) }}{\ensuremath{\pi} }-\frac{\sin{\left( 2 \ensuremath{\pi}  x\right) }}{2 \ensuremath{\pi} }-\frac{\cos{\left( 2 \ensuremath{\pi}  x\right) }}{{{\ensuremath{\pi} }^{2}}}-\frac{\sin{\left( \ensuremath{\pi}  x\right) }}{\ensuremath{\pi} }-\frac{3 \cos{\left( \ensuremath{\pi}  x\right) }}{\ensuremath{\pi} }+1.375\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Bentuk fungsi f(x)
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i26)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">fgab</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">=</span>
+            <span class="code_function">if</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">&gt;</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">xbf1</span>
+            <span class="code_function">and</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">&lt;</span>
+            <span class="code_variable">xaf1</span>
+            <span class="code_operator">)</span>
+            <span class="code_function">then</span>
+            <span class="code_function">f1</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_function">else</span>
+            <span class="code_endofline">
+              <br/>
+            </span>          
+            <span class="code_function">if</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">&gt;</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">xbf2</span>
+            <span class="code_function">and</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">&lt;</span>
+            <span class="code_variable">xaf2</span>
+            <span class="code_operator">)</span>
+            <span class="code_function">then</span>
+            <span class="code_function">f2</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_function">else</span>
+            <span class="code_endofline">
+              <br/>
+            </span>            
+            <span class="code_function">if</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">&gt;</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">xbf3</span>
+            <span class="code_function">and</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">&lt;</span>
+            <span class="code_variable">xaf3</span>
+            <span class="code_operator">)</span>
+            <span class="code_function">then</span>
+            <span class="code_function">f3</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_function">else</span>
+            <span class="code_function">f4</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Text cell -->
+    <div class="comment">Plot
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i27)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">wxplot2d</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_function">fgab</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">ftot</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xbf1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">xaf4</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\]
+</p>
+    <img src="contoh%20CAS%2013_htmlimg/contoh%20CAS%2013_4.png" width="1198" style="max-width:90%;" loading="lazy" alt=" (Graphics) "/>
+    <br/>
+    <p>\[\operatorname{	}\]
+</p>
+    <hr/>
+    <p>
+      <small> Created with 
+        <a href="https://wxMaxima-developers.github.io/wxmaxima/">wxMaxima</a>.</small>
+    </p>
+    <small> The source of this Maxima session can be downloaded 
+      <a href="contoh CAS 13_htmlimg/contoh CAS 13.wxmx">here</a>.</small>
+  </body>
+</html>

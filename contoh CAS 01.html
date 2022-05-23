@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>contoh CAS 01</title>
+    <meta name="generator" content="wxMaxima"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/x-mathjax-config">  MathJax.Hub.Config({
+    displayAlign: "left",
+    context: "MathJax",
+    TeX: {TagSide: "left"}
+  })
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async="async">  // A comment that hinders wxWidgets from optimizing this tag too much.
+</script>
+    <link rel="stylesheet" type="text/css" href="contoh%20CAS%2001_htmlimg/contoh%20CAS%2001.css"/>
+  </head>
+  <body>
+    <!-- ****************************************************** -->
+    <!-- *        Created with wxMaxima version 21.05.2       * -->
+    <!-- ****************************************************** -->
+    <noscript>
+      <div class="error message">
+        <p>Please enable JavaScript in order to get a 2d display of the equations embedded in this web page.</p>
+      </div>
+    </noscript>
+    <p hidden="hidden">\(      \DeclareMathOperator{\abs}{abs}
+      \newcommand{\ensuremath}[1]{\mbox{$#1$}}
+\)</p>
+    <!-- Image cell -->
+    <div class="image">Figure 1:
+
+      <br/>
+      <img src="contoh%20CAS%2001_htmlimg/contoh%20CAS%2001_0.png" alt="Diagram" style="max-width:90%;" loading="lazy"/>
+    </div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">kill</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">all</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\ensuremath{\mathrm{done}}\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Misalkan persamaan bidang datar dinyatakan dalam bentuk \(\Phi=ax+by+cz+d\) dan titik yang ditentukan adalah \(P (x_P,y_P,z_P)\)
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">Φ</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">a</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">b</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">c</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">z</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">d</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(\Phi )	}c z+b y+a x+d\]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_operator">[</span>
+            <span class="code_variable">a</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">b</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">c</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">d</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">0</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">$</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">x_P</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y_P</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">z_P</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">3</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">$</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">Φ</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}c z+b y+a x+d\]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">a</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}0\]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">d</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}0\]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">x_P</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}1\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Vektor normal permukaan tersebut adalah
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">N</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">a</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">b</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">c</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">$</span>
+            <span class="code_variable">magN</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">sqrt</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">a</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">b</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">c</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">Nhat</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">N</span>
+            <span class="code_operator">/</span>
+            <span class="code_variable">magN</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(Nhat)	}\left[ 0\operatorname{,}0\operatorname{,}1\right] \]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Ambil satu titik sembarang yang terletak pada bidang datar tersebut. Dengan substitusi \(x=0\) dan \(y=0\), diperoleh \(z = -d/c\). Sehingga titik yang terletak pada bidang adalah \( R (0,0,-d/c) \)
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">R</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">-</span>
+            <span class="code_variable">d</span>
+            <span class="code_operator">/</span>
+            <span class="code_variable">c</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(R)	}\left[ 0\operatorname{,}0\operatorname{,}0\right] \]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Vektor antara titik P dan titik R
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">P</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">x_P</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y_P</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">z_P</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">;</span>
+            <span class="code_variable">vekPR</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">R</span>
+            <span class="code_operator">-</span>
+            <span class="code_variable">P</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(P)	}\left[ 1\operatorname{,}2\operatorname{,}3\right] \]
+</p>
+    <p>\[\operatorname{(vekPR)	}\left[ -1\operatorname{,}-2\operatorname{,}-3\right] \]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Jarak dari titik P ke bidang datar adalah
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">jarak</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">abs</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">vekPR</span>
+            <span class="code_endofline">.</span>
+            <span class="code_variable">Nhat</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(jarak)	}3\]
+</p>
+    <hr/>
+    <p>
+      <small> Created with 
+        <a href="https://wxMaxima-developers.github.io/wxmaxima/">wxMaxima</a>.</small>
+    </p>
+  </body>
+</html>
