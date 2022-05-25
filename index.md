@@ -3,7 +3,7 @@
 ### Tutorial dan Catatan-Catatan
 
 1. [Tutorial 01](Tutorial Singkat wxMaxima.html)
-2. [Tutorial 02](t-wx-integral.html)
+2. [Tutorial 02](t-wx-integral.html) 
 3. Tutorial 03
 4. [Catatan 01](catatan-penggunaan-maxima.html)
 5. Catatan 02
