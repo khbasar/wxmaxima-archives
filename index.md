@@ -2,7 +2,7 @@
 
 ### Tutorial dan Catatan-Catatan
 
-1. [Tutorial 01](Tutorial Singkat wxMaxima.html)
+1. [Tutorial 01](Tutorial-Singkat-wxMaxima.html)
 2. [Tutorial 02](t-wx-integral.html)
 3. Tutorial 03
 4. [Catatan 01](catatan-penggunaan-maxima.html)
@@ -11,7 +11,7 @@
 
 ### Project CAS FI5080 (Sem 2/2021)
 
-1. Project 01: [Jarak Titik ke Suatu Bidang Datar](contoh CAS 01.html)
+1. Project 01: [Jarak Titik ke Suatu Bidang Datar](contoh-CAS-01.html)
 2. Project 02: Solusi SPL Dengan Metode Cramer
 3. Project 03: 
 4. Project 04: Sumbu Utama Permukaan (Diagonalisasi Matriks)
