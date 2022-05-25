@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>Tutorial Singkat wxMaxima</title>
+    <meta name="generator" content="wxMaxima"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/x-mathjax-config">  MathJax.Hub.Config({
+    displayAlign: "left",
+    context: "MathJax",
+    TeX: {TagSide: "left"}
+  })
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async="async">  // A comment that hinders wxWidgets from optimizing this tag too much.
+</script>
+    <link rel="stylesheet" type="text/css" href="Tutorial%20Singkat%20wxMaxima_htmlimg/Tutorial%20Singkat%20wxMaxima.css"/>
+  </head>
+  <body>
+    <!-- ****************************************************** -->
+    <!-- *        Created with wxMaxima version 21.05.2       * -->
+    <!-- ****************************************************** -->
+    <noscript>
+      <div class="error message">
+        <p>Please enable JavaScript in order to get a 2d display of the equations embedded in this web page.</p>
+      </div>
+    </noscript>
+    <p hidden="hidden">\(      \DeclareMathOperator{\abs}{abs}
+      \newcommand{\ensuremath}[1]{\mbox{$#1$}}
+\)</p>
+    <!-- Title cell -->
+    <div class="title">
+      <p>Tutorial Singkat Penggunaan wxMaxima
+</p>
+    </div>
+    <!-- Section cell -->
+    <div class="section">
+      <p>  1 Pendahuluan
+</p>
+    </div>
+    <!-- Text cell -->
+    <div class="comment">Pada tutorial singkat ini akan dipelajari penggunaan dasar wxMaxima. Maxima merupakan Sistem Aljabar Komputer (Computer Algebra System, CAS), serupa dengan CAS lain seperti Mathematica, Maple dan lainnya. Adapun wxMaxima adalah antar-muka grafis (GUI, graphical user interface) untuk mengoperasikan Maxima sehingga lebih mudah dan praktis digunakan.
+</div>
+    <!-- Section cell -->
+    <div class="section">
+      <p>  2 Penggunaan Dasar
+</p>
+    </div>
+    <!-- Text cell -->
+    <div class="comment">Berikut ini adalah contoh kalkulasi sederhana, dalam hal ini Maxima berperan seperti kalkulator saintifik biasa.
+      <br/>Di bawah ini adalah sel masukan (input cell) dengan operasi penjumlahan sederhana dua bilangan. Letakkan kursor pada sel tersebut kemudian tekan SHIFT-ENTER (tekan tombol SHIFT dan tombol ENTER secara bersamaan) untuk memproses kalkulasi tersebut
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i1)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_number">1</span>
+            <span class="code_operator">+</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}2\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Hasil kalkulasi akan ditampilkan pada sel keluaran (output cell).
+      <br/>Akan terlihat bahwa sel masukan (input cell) ditandai dengan penanda (%i1), sedangkan sel keluaran (output cell) ditandai dengan penanda (%o1). Angka 1 pada penanda sel masukan dan sel keluaran merupakan nomor urut sel. 
+      <br/>
+      <br/>Berikut diberikan lagi beberapa kalkulasi. Untuk memproses kalkulasi dan mendapatkan hasilnya, lakukan hal yang sama dengan yang sebelumnya yaitu letakkan kursor pada sel masukan dan kemudian tekan tombol SHIFT-ENTER bersamaan.
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i6)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_number">5</span>
+            <span class="code_operator">!</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">%</span>
+            <span class="code_operator">*</span>
+            <span class="code_number">10</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">%o1</span>
+            <span class="code_operator">*</span>
+            <span class="code_number">100</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_number">1</span>
+            <span class="code_operator">/</span>
+            <span class="code_number">3</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">.</span>
+            <span class="code_number">0</span>
+            <span class="code_operator">/</span>
+            <span class="code_number">3</span>
+            <span class="code_endofline">.</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}120\]
+</p>
+    <p>\[\operatorname{	}1200\]
+</p>
+    <p>\[\operatorname{	}200\]
+</p>
+    <p>\[\operatorname{	}\frac{1}{3}\]
+</p>
+    <p>\[\operatorname{	}0.3333333333333333\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Pada sel masukan yang ditunjukkan di atas, terdapat 5 baris perintah (proses kalkulasi) yang kita perintahkan kepada Maxima untuk dihitung. Setiap baris perintah haruslah diakhiri dengan tanda titik koma ";" atau tanda dollar "$". Jika baris perintah diakhiri dengan tanda ";", maka Maxima akan menampilkan hasil kalkulasi baris tersebut pada sel keluaran. Sedangkan jika suatu baris diakhiri dengan tanda "$", maka Maxima tidak menampilkan hasil kalkulasi baris tersebut pada sel keluaran. Perhatikan bahwa satu sel masukan yang terdiri dari 5 baris perintah tersebut (yang ditandai dengan penanda (%i2)) akan menghasilkan 5 sel keluaran (yang ditandai dengan penanda (%o2) sampai (%o6)). Perhatikan bahwa proses kalkulasi baris 4 (yaitu "1/3") dan baris 5 (yaitu "1.0/5.0") memberikan hasil yang berbeda. Hal ini dikarenakan Maxima tetap berusaha menampilkan bilangan dalam bentuk yang sederhana (tidak menampilkan hasil numerik). Jadi bilangan rasional 1/3 akan tetap ditampilkan 1/3, bilangan sqrt(2) akan tetap ditampilkan sqrt(2). Sedangkan bentuk "1.0/3.0" pada baris 5 menunjukkan bahwa hasil yang diinginkan adalah bilangan bertipe floating point. Tipe floating point ini dapat digunakan untuk menampilkan hasil numerik jika diinginkan. Misalnya contoh berikut
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i8)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">sqrt</span>
+            <span class="code_operator">(</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">%pi</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">float</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">%</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\sqrt{2} \sqrt{\ensuremath{\pi} }\]
+</p>
+    <p>\[\operatorname{	}2.506628274631001\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Pada baris kedua yang berupa perintah "float(%);" digunakan simbol "%". Simbol ini dapat digunakan untuk mengacu pada hasil proses sebelumnya. 
+      <br/>Bilangan yang dihasilkan pada proses di atas dapat dirujuk pada proses perhitungan selanjutnya dengan menggunakan penanda (%o7) ataupun (%o8)
+      <br/>
+      <br/>Dalam proses perhitung, bilangan dan ekspresi dapat disimpan dalam bentuk variabel. Dalam pendefinisian variabel, format yang digunakan adalah sebagai berikut
+      <br/>"nama_variabel:nilai;" 
+      <br/>yang berarti menyimpan "nilai" dengan nama "nama_variabel".
+      <br/>
+      <br/>Perhatikan contoh berikut
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i12)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">jejari</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">10</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">tinggi</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">100</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">luas</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">%pi</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">jejari</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">volume</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">luas</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">tinggi</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(luas)	}100 \ensuremath{\pi} \]
+</p>
+    <p>\[\operatorname{(volume)	}10000 \ensuremath{\pi} \]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Untuk menampilkan hasil numeriknya, sebagai berikut
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i14)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">float</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">luas</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_function">float</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">volume</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}314.1592653589793\]
+</p>
+    <p>\[\operatorname{	}31415.92653589793\]
+</p>
+    <!-- Section cell -->
+    <div class="section">
+      <p>  3 Penggunaan Lebih Lanjut
+</p>
+    </div>
+    <!-- Text cell -->
+    <div class="comment">Pada bagian terdahulu telah diperkenalkan penggunaan dasar Maxima untuk kalkulasi (perhitungan) sederhana seperti penjumlahan, perkalian, pembagian. Yang berarti Maxima digunakan sebagai kalkulator saintifik biasa. Maxima mempunyai kemampuan lebih jauh yang utamanya untuk proses perhitungan simbolik. Misalnya saja kita dapat menggunakan Maxima untuk menghitung integral simbolik (baik integral tertentu ataupun integral tak tentu) seperti berikut
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i16)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">%pi</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}-\cos{(x)}\]
+</p>
+    <p>\[\operatorname{	}2\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Contoh berikutnya adalah pengintegral fungsi yang didefinisikan terlebih dulu
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i20)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">f</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">a</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">f</span>
+            <span class="code_operator">(</span>
+            <span class="code_number">5</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">f</span>
+            <span class="code_operator">(</span>
+            <span class="code_number">5</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">a</span>
+            <span class="code_operator">=</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">5</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">var</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">var</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}a+25\]
+</p>
+    <p>\[\operatorname{	}20\]
+</p>
+    <p>\[\operatorname{	}\frac{{{\ensuremath{\mathrm{var}}}^{3}}}{3}+a\, \ensuremath{\mathrm{var}}\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Kadangkala Maxima memerlukan informasi tambahan untuk menyelesaikan suatu perhitungan dan meminta kita untuk menjawab pertanyaan. Pertanyaan "Is a positive or negative?" 
+      <br/>Jawabannya dapat ditulis lengkap, atau bisa juga hanya huruf pertama ("p" atau "n").
+      <br/>Misalnya seperti berikut
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i21)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">/</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">a</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\]\[\mbox{}\\"Is "a" positive or negative?"p;\]
+</p>
+    <p>\[\operatorname{	}\frac{\operatorname{atan}\left( \frac{x}{\sqrt{a}}\right) }{\sqrt{a}}\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Kita dapat juga memberi tahu terlebih dahulu kepada Maxima nilai suatu besaran (sebelum ditanyakan). Gunakan fungsi "assume" untuk hal ini. Dan untuk menghapus asumsi digunakan fungsi "forget", sebagaimana contoh berikut ini. 
+      <br/>
+      <br/>(Sebagai catatan penting: untuk mendapatkan informasi lengkap tentang suatu fungsi dalam Maxima, kita dapat mengakses file bantuan dengan menekan tombol F1)
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i24)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">assume</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">a</span>
+            <span class="code_endofline">&gt;</span>
+            <span class="code_number">0</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">/</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">a</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">forget</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">a</span>
+            <span class="code_endofline">&gt;</span>
+            <span class="code_number">0</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\frac{\operatorname{atan}\left( \frac{x}{\sqrt{a}}\right) }{\sqrt{a}}\]
+</p>
+    <!-- Section cell -->
+    <div class="section">
+      <p>  4 Contoh-contoh lainnya
+</p>
+    </div>
+    <!-- Text cell -->
+    <div class="comment">Berikut ini disajikan beberapa contoh penggunaan Maxima untuk menyelesaikan persoalan matematik umum.
+      <br/>
+      <br/>Jangan lupa, akses file bantuan F1 untuk mendapatkan informasi tentang suatu perintah atau fungsi dalam Maxima
+</div>
+    <!-- Subsection cell -->
+    <div class="subsect">
+      <p>  4.1 Solusi persamaan (akar-akar polinom)
+</p>
+    </div>
+    <!-- Text cell -->
+    <div class="comment">Memperoleh solusi persamaan dengan fungsi "solve"
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i25)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">solve</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">a</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">b</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">c</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\left[ x=-\frac{\sqrt{{{b}^{2}}-4 a c}+b}{2 a}\operatorname{,}x=\frac{\sqrt{{{b}^{2}}-4 a c}-b}{2 a}\right] \]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i26)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">solve</span>
+            <span class="code_operator">(</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">3</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\left[ x=\frac{3}{2}\right] \]
+</p>
+    <!-- Subsection cell -->
+    <div class="subsect">
+      <p>  4.2 Aljabar Linier, matriks
+</p>
+    </div>
+    <!-- Text cell -->
+    <div class="comment">Untuk menampilkan matriks, digunakan perintah "matrix". Sebuah matriks dapat berisi ekspresi non bilangan (misalnya fungsi atau variabel). Perkalian matriks (inner product) menggunakan perintah "." Untuk memperoleh invers matriks, digunakan perintah "invert".
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i30)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">A</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">matrix</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>          
+            <span class="code_operator">[</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">c</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">B</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">invert</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">A</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">A</span>
+            <span class="code_endofline">.</span>
+            <span class="code_variable">B</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">ratsimp</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">A</span>
+            <span class="code_endofline">.</span>
+            <span class="code_variable">B</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(A)	}\begin{pmatrix}1 &amp; -1\\
+1 &amp; \sin{(c)}\end{pmatrix}\]
+</p>
+    <p>\[\operatorname{(B)	}\begin{pmatrix}\frac{\sin{(c)}}{\sin{(c)}+1} &amp; \frac{1}{\sin{(c)}+1}\\
+-\frac{1}{\sin{(c)}+1} &amp; \frac{1}{\sin{(c)}+1}\end{pmatrix}\]
+</p>
+    <p>\[\operatorname{	}\begin{pmatrix}\frac{\sin{(c)}}{\sin{(c)}+1}+\frac{1}{\sin{(c)}+1} &amp; 0\\
+0 &amp; \frac{\sin{(c)}}{\sin{(c)}+1}+\frac{1}{\sin{(c)}+1}\end{pmatrix}\]
+</p>
+    <p>\[\operatorname{	}\begin{pmatrix}1 &amp; 0\\
+0 &amp; 1\end{pmatrix}\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Pada baris terakhir digunakan perintah "ratsimp" untuk menyederhanakan hasil perkalian "A.B". Maxima memiliki beberapa fungsi berbeda untuk menyederhanakan ekspresi, bergantung keperluan. Selain "ratsimp" ada juga "radcan", "trigsimp", "trigreduce", dlsb.
+</div>
+    <!-- Subsection cell -->
+    <div class="subsect">
+      <p>  4.3 Limit, differensial dan integral
+</p>
+    </div>
+    <!-- Text cell -->
+    <div class="comment">Maxima juga dapat digunakan untuk melakukan operasi terkait kalkulus, misalnya mencari limit, turunan, turunan parsial dan integral. Berikut ditampilkan beberapa contoh operasi yang sering digunakan dalam kalkulus
+</div>
+    <!-- Text cell -->
+    <div class="comment">Operasi mencari limit yang sering dijumpai sebelum mempelajari kalkulus (turunan dan integral) dapat dilakukan dengan perintah
+      <br/>limit(f(x),x,a)
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i32)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">f</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">3</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">5</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">limit</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}1\]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i33)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">limit</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">inf</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\infty \]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i36)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">f2</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">=</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">9</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">/</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">3</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">limit</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f2</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">4</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">limit</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f2</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">a</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}7\]
+</p>
+    <p>\[\operatorname{	}a+3\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Turunan suatu fungsi diperoleh dengan perintah "diff"
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i39)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">h1</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">=</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">%e</span>
+            <span class="code_operator">^</span>
+            <span class="code_operator">(</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">hx1</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">h1</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_comment">/*turunan pertama*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">hxx1</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">h1</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_comment">/*turunan kedua*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\operatorname{h1}(x)\operatorname{:=}\sin{(x)} {{\% e}^{2 x}}\]
+</p>
+    <p>\[\operatorname{(hx1)	}2 {{\% e}^{2 x}} \sin{(x)}+{{\% e}^{2 x}} \cos{(x)}\]
+</p>
+    <p>\[\operatorname{(hxx1)	}3 {{\% e}^{2 x}} \sin{(x)}+4 {{\% e}^{2 x}} \cos{(x)}\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Apapun yang kita ketikkan di antara tanda /* dan */ tidak akan dievaluasi oleh Maxima, oleh karenanya ini dapat digunakan untuk menuliskan keterangan atau komentar atau catatan. Hal ini ditunjukkan seperti pada baris kedua dan ketiga di atas.
+</div>
+    <!-- Text cell -->
+    <div class="comment">Turunan parsial untuk suatu fungsi multivariabel juga dapat diperoleh, contohnya sebagai berikut
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i44)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">z</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">%e</span>
+            <span class="code_operator">^</span>
+            <span class="code_operator">(</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">zx</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">'</span>
+            <span class="code_function">diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">z</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*turunan pertama z terhadap variabel x*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">zy</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">'</span>
+            <span class="code_function">diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">z</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*turunan pertama z terhadap variabel y*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">zx</span>
+            <span class="code_operator">=</span>
+            <span class="code_function">diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">z</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">zy</span>
+            <span class="code_operator">=</span>
+            <span class="code_function">diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">z</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\operatorname{z}\left( x\operatorname{,}y\right) \operatorname{:=}{{x}^{2}} y+{{\% e}^{2 y}}\]
+</p>
+    <p>\[\operatorname{	}\frac{d}{d x} \left( {{\% e}^{2 y}}+{{x}^{2}} y\right) =2 x y\]
+</p>
+    <p>\[\operatorname{	}\frac{d}{d y} \left( {{\% e}^{2 y}}+{{x}^{2}} y\right) =2 {{\% e}^{2 y}}+{{x}^{2}}\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Pada baris pertama didefinisikan suatu fungsi multivariabel z(x,y).
+      <br/>Pada baris kedua dan ketiga, digunakan fungsi "diff" namun dengan tambahan tanda apostrof (" ' ") di depannya. Tanda apostrof ini berguna untuk menampilkan bentuk operasi (tanpa menghitungnya). 
+      <br/>Perhatikan contoh berikut
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i46)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">'</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}-\cos{(x)}\]
+</p>
+    <p>\[\operatorname{	}\int {\left. \sin{(x)}dx\right.}\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Pada baris pertama Maxima menghitung hasil integral sin(x) yaitu sama dengan -cos(x), sedangkan pada baris kedua (perintah "integrate" diawali dengan tanda apostrof), Maxima akan menampilkan bentuk operasinya.
+      <br/>Perhatikan contoh berikut ini
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i49)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">hf</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">e</span>
+            <span class="code_operator">^</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">'</span>
+            <span class="code_function">diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">hf</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">hf</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\operatorname{hf}(x)\operatorname{:=}{{x}^{2}}-2 x {{e}^{\left( -2\right)  x}}\]
+</p>
+    <p>\[\operatorname{	}\frac{{{d}^{2}}}{d {{x}^{2}}} \left( {{x}^{2}}-\frac{2 x}{{{e}^{2 x}}}\right) \]
+</p>
+    <p>\[\operatorname{	}-\frac{8 {{\log{(e)}}^{2}} x}{{{e}^{2 x}}}+\frac{8 \log{(e)}}{{{e}^{2 x}}}+2\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Integral taktentu dan integral tertentu
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i52)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">fungsi</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">e</span>
+            <span class="code_operator">^</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">'</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">fungsi</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">=</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">fungsi</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_comment">/*integral tak tentu (indefinite integral)*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">'</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">fungsi</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">=</span>
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">fungsi</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_comment">/*integral tertentu (definite integral)*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\operatorname{fungsi}(x)\operatorname{:=}x {{e}^{\left( -2\right)  x}}\]
+</p>
+    <p>\[\operatorname{	}\int {\left. \frac{x}{{{e}^{2 x}}}dx\right.}=-\frac{\left( 2 \log{(e)} x+1\right)  {{\% e}^{-2 \log{(e)} x}}}{4 {{\log{(e)}}^{2}}}\]
+</p>
+    <p>\[\operatorname{	}\int_{0}^{1}{\left. \frac{x}{{{e}^{2 x}}}dx\right.}=\frac{1}{4 {{\log{(e)}}^{2}}}-\frac{2 \log{(e)}+1}{4 {{e}^{2}} {{\log{(e)}}^{2}}}\]
+</p>
+    <!-- Subsection cell -->
+    <div class="subsect">
+      <p>  4.4 Persamaan Differensial
+</p>
+    </div>
+    <!-- Text cell -->
+    <div class="comment">Untuk memperoleh solusi persamaan differensial, Maxima mempunyai fungsi "ode2"
+      <br/>Misalnya untuk persamaan differensial orde 2 yang dinyatakan dengan 
+      <br/>y''(t) + omega^2 * y(t) = 0
+      <br/>dengan omega &gt; 0
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i54)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">pdb</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">'</span>
+            <span class="code_function">diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">y</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">t</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">omega</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">solum</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">ode2</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">pdb</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">t</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_comment">/*solusi umum*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(pdb)	}\frac{{{d}^{2}}}{d {{t}^{2}}} y+{{omega}^{2}} y=0
+\]\[\mbox{}\\"Is "omega" zero or nonzero?"n;\]
+</p>
+    <p>\[\operatorname{(solum)	}y=\ensuremath{\mathrm{\% k1}} \sin{\left( omega t\right) }+\ensuremath{\mathrm{\% k2}} \cos{\left( omega t\right) }\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Untuk kasus initial value problem, solusi khusus dapat diperoleh menggunakan "ic2".
+      <br/>Misalnya syarat yang diberikan adalah y(t=0)=amp dan y'(t=0)=0
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i55)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">ic2</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">solum</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">t</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">amp</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">'</span>
+            <span class="code_function">diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">y</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">t</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">0</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}y=\ensuremath{\mathrm{amp}} \cos{\left( omega t\right) }\]
+</p>
+    <!-- Section cell -->
+    <div class="section">
+      <p>  5 Grafik dan Plotting
+</p>
+    </div>
+    <!-- Text cell -->
+    <div class="comment">Grafik dua dimensi dibuat dengan perintah "wxplot2d" sedangkan untuk tiga dimensi digunakan perintah "wxplot3d"
+      <br/>Contohnya adalah sebagai berikut
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i57)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">wxplot2d</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_function">cos</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">%pi</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">wxplot3d</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">exp</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">-</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">-</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">y</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\]
+</p>
+    <img src="Tutorial%20Singkat%20wxMaxima_htmlimg/Tutorial%20Singkat%20wxMaxima_48.png" width="1198" style="max-width:90%;" loading="lazy" alt=" (Graphics) "/>
+    <br/>
+    <p>\[\operatorname{	}\]
+</p>
+    <p>\[\operatorname{	}\]
+</p>
+    <img src="Tutorial%20Singkat%20wxMaxima_htmlimg/Tutorial%20Singkat%20wxMaxima_51.png" width="1198" style="max-width:90%;" loading="lazy" alt=" (Graphics) "/>
+    <br/>
+    <p>\[\operatorname{	}\]
+</p>
+    <hr/>
+    <p>
+      <small> Created with 
+        <a href="https://wxMaxima-developers.github.io/wxmaxima/">wxMaxima</a>.</small>
+    </p>
+  </body>
+</html>
