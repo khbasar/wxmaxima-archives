@@ -3,11 +3,12 @@
 ### Tutorial dan Catatan-Catatan
 
 1. [Tutorial 01](Tutorial Singkat wxMaxima.html)
-2. [Tutorial 02](t-wx-integral.html) 
-3. Tutorial 03
-4. [Catatan 01](catatan-penggunaan-maxima.html)
-5. Catatan 02
-6. Catatan 03
+2. [Tutorial 01](Tutorial Singkat wxMaxima.html)
+3. [Tutorial 02](t-wx-integral.html) 
+4. Tutorial 03
+5. [Catatan 01](catatan-penggunaan-maxima.html)
+6. Catatan 02
+7. Catatan 03
 
 ### Project CAS FI5080 (Sem 2/2021)
 
