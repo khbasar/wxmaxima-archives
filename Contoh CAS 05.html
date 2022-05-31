@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>Contoh CAS 05</title>
+    <meta name="generator" content="wxMaxima"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/x-mathjax-config">  MathJax.Hub.Config({
+    displayAlign: "left",
+    context: "MathJax",
+    TeX: {TagSide: "left"}
+  })
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async="async">  // A comment that hinders wxWidgets from optimizing this tag too much.
+</script>
+    <link rel="stylesheet" type="text/css" href="Contoh%20CAS%2005_htmlimg/Contoh%20CAS%2005.css"/>
+  </head>
+  <body>
+    <!-- ****************************************************** -->
+    <!-- *        Created with wxMaxima version 21.05.2       * -->
+    <!-- ****************************************************** -->
+    <noscript>
+      <div class="error message">
+        <p>Please enable JavaScript in order to get a 2d display of the equations embedded in this web page.</p>
+      </div>
+    </noscript>
+    <p hidden="hidden">\(      \DeclareMathOperator{\abs}{abs}
+      \newcommand{\ensuremath}[1]{\mbox{$#1$}}
+\)</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i1)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">kill</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">all</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\ensuremath{\mathrm{done}}\]
+</p>
+    <!-- Image cell -->
+    <div class="image">Figure 1:
+
+      <br/>
+      <img src="Contoh%20CAS%2005_htmlimg/Contoh%20CAS%2005_1.png" alt="Diagram" style="max-width:90%;" loading="lazy"/>
+    </div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_comment">/*x:2;y:1;z:1;*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*koordinat x,y, dan z*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*theta:atan(y/x)$*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*r:sqrt(x^2+y^2)$*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">trans_vek_sat</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">matrix</span>
+            <span class="code_operator">(</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">[</span>
+            <span class="code_function">cos</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">θ</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">θ</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">0</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">[</span>
+            <span class="code_operator">-</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">θ</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_function">cos</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">θ</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">0</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">[</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*matriks transformasi vektor K --&gt; S*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">A</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">invert</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">trans_vek_sat</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*matriks transformasi vektor satuan S --&gt; K*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">iHat</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">A</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">rHat</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">A</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">teHat</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">A</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">3</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">zHat</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">jHat</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">A</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">rHat</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">A</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">teHat</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">A</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">3</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">zHat</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">kHat</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">A</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">3</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">rHat</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">A</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">3</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">teHat</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">A</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">3</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">3</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">zHat</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*vektor-vektor satuan i,j dan k dinyatakan dalam vektor satuan</span>
+            <span class="code_comment">
+              <br/>
+            </span>
+            <span class="code_comment">SKS*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Text cell -->
+    <div class="comment">Bentuk medan vektor A dalam sistem koordinat kartesian
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">medan_A</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">iHat</span>
+            <span class="code_operator">-</span>
+            <span class="code_variable">jHat</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">kHat</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*bentuk medan vektor A dalam SKK*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Text cell -->
+    <div class="comment">Bentuk medan vektor A dalam sistem koordinat silinder
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i9)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">xk</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">r</span>
+            <span class="code_operator">*</span>
+            <span class="code_function">cos</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">θ</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_variable">yk</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">r</span>
+            <span class="code_operator">*</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">θ</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">A_silinder</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">subst</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">xk</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">yk</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">medan_A</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(A\_ silinder)	}2 r \cos{\left( \theta \right) } \left( \frac{\ensuremath{\mathrm{rHat}} \cos{\left( \theta \right) }}{{{\sin{\left( \theta \right) }}^{2}}+{{\cos{\left( \theta \right) }}^{2}}}-\frac{\ensuremath{\mathrm{teHat}} \sin{\left( \theta \right) }}{{{\sin{\left( \theta \right) }}^{2}}+{{\cos{\left( \theta \right) }}^{2}}}\right) -\frac{\ensuremath{\mathrm{rHat}} \sin{\left( \theta \right) }}{{{\sin{\left( \theta \right) }}^{2}}+{{\cos{\left( \theta \right) }}^{2}}}-\frac{\ensuremath{\mathrm{teHat}} \cos{\left( \theta \right) }}{{{\sin{\left( \theta \right) }}^{2}}+{{\cos{\left( \theta \right) }}^{2}}}+r\, \ensuremath{\mathrm{zHat}} \sin{\left( \theta \right) }\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Titik (koordinat) yang dievaluasi
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">x0</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">$</span>
+            <span class="code_variable">y0</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">$</span>
+            <span class="code_variable">z0</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">$</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i13)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">A_sil_koord</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">subst</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">x0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">y0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">θ</span>
+            <span class="code_operator">=</span>
+            <span class="code_function">atan</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">y0</span>
+            <span class="code_operator">/</span>
+            <span class="code_variable">x0</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">medan_A</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(A\_ sil\_ koord)	}\ensuremath{\mathrm{zHat}}+2 \left( \frac{\ensuremath{\mathrm{rHat}}}{\sqrt{2}}-\frac{\ensuremath{\mathrm{teHat}}}{\sqrt{2}}\right) -\frac{\ensuremath{\mathrm{teHat}}}{\sqrt{2}}-\frac{\ensuremath{\mathrm{rHat}}}{\sqrt{2}}\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Ungkapan medan vektor A dalam sistem koordinat silinder
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i14)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">ratsimp</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">A_sil_koord</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\frac{2 \ensuremath{\mathrm{zHat}}-3 \sqrt{2} \ensuremath{\mathrm{teHat}}+\sqrt{2} \ensuremath{\mathrm{rHat}}}{2}\]
+</p>
+    <hr/>
+    <p>
+      <small> Created with 
+        <a href="https://wxMaxima-developers.github.io/wxmaxima/">wxMaxima</a>.</small>
+    </p>
+  </body>
+</html>

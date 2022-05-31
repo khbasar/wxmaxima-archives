@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>contoh CAS 07</title>
+    <meta name="generator" content="wxMaxima"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/x-mathjax-config">  MathJax.Hub.Config({
+    displayAlign: "left",
+    context: "MathJax",
+    TeX: {TagSide: "left"}
+  })
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async="async">  // A comment that hinders wxWidgets from optimizing this tag too much.
+</script>
+    <link rel="stylesheet" type="text/css" href="contoh%20CAS%2007_htmlimg/contoh%20CAS%2007.css"/>
+  </head>
+  <body>
+    <!-- ****************************************************** -->
+    <!-- *        Created with wxMaxima version 21.05.2       * -->
+    <!-- ****************************************************** -->
+    <noscript>
+      <div class="error message">
+        <p>Please enable JavaScript in order to get a 2d display of the equations embedded in this web page.</p>
+      </div>
+    </noscript>
+    <p hidden="hidden">\(      \DeclareMathOperator{\abs}{abs}
+      \newcommand{\ensuremath}[1]{\mbox{$#1$}}
+\)</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i1)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">kill</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">all</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\ensuremath{\mathrm{done}}\]
+</p>
+    <!-- Image cell -->
+    <div class="image">Figure 1:
+
+      <br/>
+      <img src="contoh%20CAS%2007_htmlimg/contoh%20CAS%2007_1.png" alt="Diagram" style="max-width:90%;" loading="lazy"/>
+    </div>
+    <!-- Text cell -->
+    <div class="comment">Permukaan yang dinyatakan dengan fungsi z = x^2+y^2+2x-4y+10
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i1)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">z</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">+</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">4</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">+</span>
+            <span class="code_number">10</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(z)	}{{y}^{2}}-4 y+2 {{x}^{2}}+2 x+10\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Plot permukaan z tersebut menggunakan wxplot3d
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i2)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">wxplot3d</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">z</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">5</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">5</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">y</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">5</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">5</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">gnuplot_pm3d</span>
+            <span class="code_endofline">,</span>
+            <span class="code_function">false</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\]
+</p>
+    <img src="contoh%20CAS%2007_htmlimg/contoh%20CAS%2007_4.png" width="1198" style="max-width:90%;" loading="lazy" alt=" (Graphics) "/>
+    <br/>
+    <!-- Text cell -->
+    <div class="comment">Mencari titik minimum dengan pengaturan turunan sama dengan nol
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i4)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_comment">/*turunan terhadap x*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">z_x</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">z</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*turunan terhadap y*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">z_y</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">z</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(z\_ x)	}4 x+2\]
+</p>
+    <p>\[\operatorname{(z\_ y)	}2 y-4\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Titik minimum
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i6)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">x_min</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">solve</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">z_x</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">0</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_variable">y_min</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">solve</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">z_y</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">0</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(x\_ min)	}\left[ x=-\frac{1}{2}\right] \]
+</p>
+    <p>\[\operatorname{(y\_ min)	}\left[ y=2\right] \]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i8)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">ttkxmin</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">rhs</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x_min</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_variable">ttkymin</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">rhs</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">y_min</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(ttkxmin)	}-\frac{1}{2}\]
+</p>
+    <p>\[\operatorname{(ttkymin)	}2\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Nilai fungsi z di titik minimum
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i9)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">define</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">z</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">z</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_comment">/*mendefinisikan z sebagai suatu fungsi z(x,y)*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\operatorname{z}\left( x\operatorname{,}y\right) \operatorname{:=}{{y}^{2}}-4 y+2 {{x}^{2}}+2 x+10\]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i10)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">float</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">sublis</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">ttkxmin</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">=</span>
+            <span class="code_variable">ttkymin</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_function">z</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*substitusi nilai z(x,y) untuk x = ttkxmin dan y = ttkymin*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}5.5\]
+</p>
+    <hr/>
+    <p>
+      <small> Created with 
+        <a href="https://wxMaxima-developers.github.io/wxmaxima/">wxMaxima</a>.</small>
+    </p>
+  </body>
+</html>
