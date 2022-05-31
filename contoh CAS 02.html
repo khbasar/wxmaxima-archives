@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>contoh CAS 02</title>
+    <meta name="generator" content="wxMaxima"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/x-mathjax-config">  MathJax.Hub.Config({
+    displayAlign: "left",
+    context: "MathJax",
+    TeX: {TagSide: "left"}
+  })
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async="async">  // A comment that hinders wxWidgets from optimizing this tag too much.
+</script>
+    <link rel="stylesheet" type="text/css" href="contoh%20CAS%2002_htmlimg/contoh%20CAS%2002.css"/>
+  </head>
+  <body>
+    <!-- ****************************************************** -->
+    <!-- *        Created with wxMaxima version 21.05.2       * -->
+    <!-- ****************************************************** -->
+    <noscript>
+      <div class="error message">
+        <p>Please enable JavaScript in order to get a 2d display of the equations embedded in this web page.</p>
+      </div>
+    </noscript>
+    <p hidden="hidden">\(      \DeclareMathOperator{\abs}{abs}
+      \newcommand{\ensuremath}[1]{\mbox{$#1$}}
+\)</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">kill</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">all</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\ensuremath{\mathrm{done}}\]
+</p>
+    <!-- Image cell -->
+    <div class="image">Figure 1:
+
+      <br/>
+      <img src="contoh%20CAS%2002_htmlimg/contoh%20CAS%2002_1.png" alt="Diagram" style="max-width:90%;" loading="lazy"/>
+    </div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">spl6</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">z</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">α</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">β</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">γ</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">6</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>      
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">+</span>
+            <span class="code_number">3</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">α</span>
+            <span class="code_operator">-</span>
+            <span class="code_variable">β</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">4</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>      
+            <span class="code_operator">-</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">-</span>
+            <span class="code_variable">γ</span>
+            <span class="code_operator">+</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">β</span>
+            <span class="code_operator">-</span>
+            <span class="code_variable">z</span>
+            <span class="code_operator">=</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>      
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">3</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">α</span>
+            <span class="code_operator">+</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">γ</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>      
+            <span class="code_variable">x</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">y</span>
+            <span class="code_operator">-</span>
+            <span class="code_variable">z</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">γ</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">α</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>      
+            <span class="code_variable">α</span>
+            <span class="code_operator">+</span>
+            <span class="code_number">3</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">β</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">*</span>
+            <span class="code_variable">γ</span>
+            <span class="code_operator">-</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">0</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(spl6)	}\]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">matkoef</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">coefmatrix</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">spl6</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">z</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">α</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">β</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">γ</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_comment">/*matriks koefisien*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(matkoef)	}\begin{pmatrix}1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1\\
+2 &amp; 0 &amp; 0 &amp; 3 &amp; -1 &amp; 0\\
+0 &amp; -1 &amp; -1 &amp; 0 &amp; 2 &amp; -1\\
+0 &amp; 2 &amp; 0 &amp; -3 &amp; 0 &amp; 2\\
+1 &amp; 1 &amp; -1 &amp; 1 &amp; 0 &amp; -2\\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 3 &amp; -2\end{pmatrix}\]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">Dmk</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">determinant</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">matkoef</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_comment">/*determinan matriks koefisien*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(Dmk)	}-4\]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">augmat</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">augcoefmatrix</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">spl6</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">y</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">z</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">α</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">β</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">γ</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*augmented matrix*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">hitmatx</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">submatrix</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">columnswap</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">augmat</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">7</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">7</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*kolom pertama diganti*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">hitmaty</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">submatrix</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">columnswap</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">augmat</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">7</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">7</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*kolom kedua diganti*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">hitmatz</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">submatrix</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">columnswap</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">augmat</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">3</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">7</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">7</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*kolom ketiga diganti*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">hitmatα</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">submatrix</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">columnswap</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">augmat</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">4</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">7</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">7</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*kolom keempat diganti*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">hitmatβ</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">submatrix</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">columnswap</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">augmat</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">5</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">7</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">7</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*kolom kelima diganti*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">hitmatγ</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">submatrix</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">columnswap</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">augmat</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">6</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">7</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">7</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_comment">/*kolom keenam diganti*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">detx</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">-</span>
+            <span class="code_function">determinant</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">hitmatx</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">dety</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">-</span>
+            <span class="code_function">determinant</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">hitmaty</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">detz</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">-</span>
+            <span class="code_function">determinant</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">hitmatz</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">detα</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">-</span>
+            <span class="code_function">determinant</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">hitmatα</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">detβ</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">-</span>
+            <span class="code_function">determinant</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">hitmatβ</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">detγ</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">-</span>
+            <span class="code_function">determinant</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">hitmatγ</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_comment">/*menghitung determinan matriks yang kolomnya telah diganti dengan kolom koefisien</span>
+            <span class="code_comment">
+              <br/>
+            </span>
+            <span class="code_comment">karena kolom koefisien dituliskan di ruas kiri, maka determinan dikali -1*/</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt"> --&gt;	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_operator">[</span>
+            <span class="code_variable">valx</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">valy</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">valz</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">valα</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">valβ</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">valγ</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">detx</span>
+            <span class="code_operator">/</span>
+            <span class="code_variable">Dmk</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">dety</span>
+            <span class="code_operator">/</span>
+            <span class="code_variable">Dmk</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">detz</span>
+            <span class="code_operator">/</span>
+            <span class="code_variable">Dmk</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">detα</span>
+            <span class="code_operator">/</span>
+            <span class="code_variable">Dmk</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">detβ</span>
+            <span class="code_operator">/</span>
+            <span class="code_variable">Dmk</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">detγ</span>
+            <span class="code_operator">/</span>
+            <span class="code_variable">Dmk</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\left[ 1\operatorname{,}1\operatorname{,}1\operatorname{,}1\operatorname{,}1\operatorname{,}1\right] \]
+</p>
+    <hr/>
+    <p>
+      <small> Created with 
+        <a href="https://wxMaxima-developers.github.io/wxmaxima/">wxMaxima</a>.</small>
+    </p>
+  </body>
+</html>
